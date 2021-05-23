@@ -1,0 +1,81 @@
+<!--로그인 페이지-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숙명여대 통계학과 | 로그인</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header_area box_inner clear">
+      <!--상위 통계학과 로고-->
+      <a href="../index.html"><img class="logo" src="../img/statics_logo.PNG" alt="통계학과"></a>
+      <div class="header_login">
+        <ul class="login">
+            <li><a href="../index.html">HOME</a></li>
+            <li> | </li>
+            <li><a href="login.html">로그인</a></li>
+            <li> | </li>
+            <li><a href="regist.html">회원가입</a></li>
+        </ul>
+      </div>
+      <!-- NAV : 상단 메뉴바-->
+      <nav>
+        <div class="header_cont">
+          <ul class="menu">
+            <li><a href="../menu/introstat.html">학과 소개</a></li>
+            <li><a href="../menu/curriculum.html">교육 과정</a></li>
+            <li><a href="../menu/board.html">게시판</a></li>
+            <li><a href="../menu/community.html">커뮤니티</a></li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+  </header>
+
+  <img class="noonsong" src="../img/statchar.jpg" alt="통계 눈송이">
+  <br><br>
+  <hr>
+  <form action="#" method="POST">
+    <!--아이디 입력-->
+    <p class="enterid">ID &nbsp;&nbsp;&nbsp;&nbsp; <input id="userid" type="text" placeholder="아이디를 입력하세요"></p>
+    <!--비밀번호 입력-->
+    <p class="enterpw">PW &nbsp;&nbsp;&nbsp;&nbsp;<input id="userpw" type="password" placeholder="비밀번호를 입력하세요"></p>
+    <!--로그인 버튼-->
+    <input type="button" value="LOGIN" class="loginbtn" onclick="checkidpw()">
+    <!--자동 로그인 -->
+    <input type="radio" class="autologin"> 자동 로그인 &nbsp;&nbsp;
+  </form>
+
+  <script type="text/javascript">
+    //아이디, 비밀번호 둘다 입력 시에 로그인 되는 함수 : checkidpw()
+    function checkidpw(){
+      var id = document.getElementById("userid").value;
+      var pw = document.getElementById("userpw").value;
+      if ((!id) || (!pw)){
+        alert("아이디 또는 비밀번호를 입력하시않았습니다.");
+      }
+      else {
+        //로그인 성공 시 메인 페이지로 이동
+        alert("정상 로그인");
+        location.href="../index.html";
+      }
+    }
+  </script>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot_area box_inner">
+        <hr width="1450px" color="#ddd"noshade/>
+        <h2>숙명여자대학교</h2>
+        <p class="addr">104-742 서울특별시 용산구 청파로 47길 100(청파동 2가) 숙명여자대학교 통계학과 / TEL : 02)710-9437 / FAX : 02)710-9437</p>
+        <p class="copy box_inner">COPYRIGHT ⓒ SOOKMYUNG WOMEN'S UNIVERSITY. MINJI KIM. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+</body>
+</html>
